@@ -13,7 +13,7 @@ body{
 h1 {
     font-size: 4rem;
     font-weight: 800;
-    margin: 0;
+    margin: 0;;
 }
 
 h2 {
@@ -37,16 +37,19 @@ button:hover {
   background-color: #3e2ecc;
 }
 
-#presentation-container{
+#presentation-container {
     border: 1px solid black;
-    padding: 40px 120px;
-    height: 600px;
+    padding: 2.5rem 7.5rem;
+    height: 100vh;
+    background-image: url(./assets/background.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 #presentation {
-    width: 600px;
+    width: 37.5vw;
     position: relative;
-    top: calc(50% - 145px);
+    top: calc(50% - 9rem);
 }
 
 .container {
@@ -55,7 +58,11 @@ button:hover {
 }
 
 .container p {
-    margin-bottom: 30px;
+    margin-bottom: 1.875rem;
     font-weight: 500;
 }
 
+.background-gradient {
+    background: linear-gradient(180deg, rgb(252, 250, 250) 0%, rgb(161, 161, 161) 100%);
+   
+}
