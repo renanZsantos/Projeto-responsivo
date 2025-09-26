@@ -51,7 +51,7 @@ button:hover {
 }
 
 #presentation {
-    width: 37.5vw;  
+    width: 50vw;  
 }
 
 #presentation p {
@@ -92,18 +92,49 @@ button:hover {
 
 .article-container {
     display: flex;
-    flex-direction: row;
+    margin-top: 6.5rem;
 }
 
 .article-container:nth-child(even) {
     flex-direction: row-reverse;
 }
 
-.article-details:nth-child(odd) {
-    flex-direction: row-reverse;
-}
 .article-details {
     display: flex;
     flex-direction: column;
+    text-align: left;
     align-items: flex-start;
+    margin: 0 2.5rem 0 0;
+    justify-content: space-between;
+}
+
+.article-details button{
+    font-size: 1rem;
+}
+
+.article-container:nth-child(even) > .article-details {
+    margin: 0 0 0 2.5rem;
+}
+
+.footer-lists {
+    display: flex;
+    text-align: left;
+    justify-content: space-between;
+    line-height: 2.5rem;
+}
+
+.footer-lists ul li {
+    list-style: none;
+}
+
+
+.footer-list-title {
+    padding-bottom: .8rem;
+    font-weight: 800;
+}
+
+.footer-copyright {
+    display: flex;
+    justify-content: space-between;
+    margin: 5rem 0 0 0;
 }
