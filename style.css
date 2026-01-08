@@ -102,6 +102,10 @@ button:hover {
     color: white;
 }
 
+.background-grey {
+    background-color: #F4F5F7;
+}
+
     /* Serviços - Articles */
 
 .article-container {
@@ -204,44 +208,67 @@ button:hover {
 
 .grid-container-companies {
     display: grid;
-    grid-template-areas:
-            ". company-2 ."
-    "company-1          company-4"
-            ". company-3 .";
-    
-    gap: 1rem;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: ;
     justify-content: center;
     align-items: center;
     padding: 2rem;
 }
 
-.company-1 { grid-area: 3 / 3 / 4 / 4; } 
-.company-2 { grid-area: 2 / 2 / 3 / 3; } 
-.company-3 { grid-area: 2 / 3 / 3 / 4; } 
-.company-4 { grid-area: 2 / 4 / 3 / 5; } 
-.company-5 { grid-area: 1 / 3 / 2 / 4; } 
+.grid-item-companies {
+    border-radius: 1rem;
+    display: flex;    
+}
 
+.company-1 { 
+    grid-area: 2 / 1 ; 
+} 
+.company-2 { 
+    grid-area: 1 / 2 / 3; 
+} 
+.company-3 { 
+    grid-area: 3 / 2 ; 
+} 
+.company-4 { 
+    grid-area: 1 / 3 ; 
+} 
+.company-5 { 
+    grid-area: 2 / 3 ; 
+} 
+.company-6 { 
+    grid-area: 3 / 3 ; 
+} 
+.company-7 { 
+    grid-area: 1 / 4 / 3; 
+} 
+.company-8 { 
+    grid-area: 3 / 4 ; 
+} 
+.company-9 { 
+    grid-area: 2 / 5 ; 
+} 
 
+/* Media Queries */
 
+@media (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
 
-/*.company-1 { grid-area: company-1; }
-.company-2 { grid-area: company-2; }
-.company-3 { grid-area: company-3; }
-.company-4 { grid-area: company-4; }
-.company-5 { grid-area: company-5; }
+    .grid-container-companies {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(5, 1fr);
+    }
+}
 
+@media (max-width: 480px) {
+    .grid-container {
+        grid-template-columns: 1fr;
+    }
 
-
-
-
-
-
-
-
-
-
-/*.grid-container-companies {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: 3;
+    .grid-container-companies {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(9, 1fr);
+    }
 }
