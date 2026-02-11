@@ -250,10 +250,22 @@ button:hover {
 
 /* Media Queries */
 
-@media (max-width: 768px) {
-    .grid-container {
-        grid-template-columns: repeat(2, 1fr);
+@media (min-width: 768px) and (max-width: 1023px) {
+    h1 {
+        font-size: 3.5rem;
     }
+
+    h2 {
+        font-size: 2rem; 
+    }
+
+    .grid-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 5rem;
+    }
+
+
 
     .grid-container-companies {
         grid-template-columns: repeat(2, 1fr);
@@ -261,7 +273,16 @@ button:hover {
     }
 }
 
-@media (max-width: 480px) {
+
+@media (max-width: 767px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+    
+    h2 {
+        font-size: 1.5rem; 
+    }
+    
     .grid-container {
         grid-template-columns: 1fr;
     }
@@ -270,4 +291,44 @@ button:hover {
         grid-template-columns: 1fr;
         grid-template-rows: repeat(9, 1fr);
     }
-}
+
+    #qualities {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+    margin-top: 4rem;
+    }
+
+    #qualities > img {
+    transform: rotate(90deg);
+    margin: 2.5rem 0;
+    }
+
+    .article-container {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+       
+    }
+
+    .article-container:nth-child(even) {
+    flex-direction: column-reverse;
+    align-items: center;
+    }
+
+    .article-container:nth-child(even) > .article-details {
+        margin: 2rem 0;
+    }
+
+    .article-details {
+        align-items: normal;
+        text-align: center;
+        margin: 2rem 0;
+    
+    }
+
+    .article-details p {
+        padding: 0;
+    }
+
+}    
