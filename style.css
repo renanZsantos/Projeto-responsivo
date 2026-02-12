@@ -113,6 +113,10 @@ button:hover {
     margin-top: 6.5rem;
 }
 
+.article-container > img {
+    width: 50%;
+}
+
 .article-container:nth-child(even) {
     flex-direction: row-reverse;
 }
@@ -260,17 +264,25 @@ button:hover {
     }
 
     .grid-container {
-        display: grid;
         grid-template-columns: repeat(2, 1fr);
-        gap: 5rem;
     }
 
+        /* testeteste */
 
-
-    .grid-container-companies {
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(5, 1fr);
+    .article-details p {
+        padding: 0;
+        margin: 0;
+        line-height: normal; 
+        padding-top: 1.2rem;
     }
+
+    .article-container {
+        margin-top: 4rem;
+    }
+
+    .article-container:nth-child(even) > .article-details {
+    margin-left: 3rem;
+}
 }
 
 
@@ -308,7 +320,6 @@ button:hover {
         display: flex;
         flex-direction: column-reverse;
         align-items: center;
-       
     }
 
     .article-container:nth-child(even) {
@@ -318,7 +329,7 @@ button:hover {
 
     .article-container:nth-child(even) > .article-details {
         margin: 2rem 0;
-    }
+    } 
 
     .article-details {
         align-items: normal;
